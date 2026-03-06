@@ -19,13 +19,12 @@ import java.util.Scanner;
 public class GameManager {
 
     public static void main(String[] args) {
-        System.out.println("██████╗  █████╗ ██████╗ ██╗  ██╗███████╗ ██████╗ ██╗   ██╗██╗     ███████╗    ██╗██████╗ ");
-        System.out.println("██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝██╔═══██╗██║   ██║██║     ██╔════╝   ██╔╝██╔══██╗");
-        System.out.println("██║  ██║███████║██████╔╝█████╔╝ ███████╗██║   ██║██║   ██║██║     ███████╗  ██╔╝ ██████╔╝");
-        System.out.println("██║  ██║██╔══██║██╔══██╗██╔═██╗ ╚════██║██║   ██║██║   ██║██║     ╚════██║ ██╔╝  ██╔══██╗");
-        System.out.println("██████╔╝██║  ██║██║  ██║██║  ██╗███████║╚██████╔╝╚██████╔╝███████╗███████║██╔╝   ██║  ██║");
-        System.out.println("╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚═╝    ╚═╝  ╚═╝");
-        System.out.println("                                                                                    Jr.");
+        System.out.println("██████╗ ██████╗ ██╗ ██████╗ ██╗  ██╗████████╗███████╗ ██████╗ ██╗   ██╗██╗     ███████╗");
+        System.out.println("██╔══██╗██╔══██╗██║██╔════╝ ██║  ██║╚══██╔══╝██╔════╝██╔═══██╗██║   ██║██║     ██╔════╝");
+        System.out.println("██████╔╝██████╔╝██║██║  ███╗███████║   ██║   ███████╗██║   ██║██║   ██║██║     ███████╗");
+        System.out.println("██╔══██╗██╔══██╗██║██║   ██║██╔══██║   ██║   ╚════██║██║   ██║██║   ██║██║     ╚════██║");
+        System.out.println("██████╔╝██║  ██╗██║╚██████╔╝██║  ██║   ██║   ███████║╚██████╔╝╚██████╔╝███████╗███████║");
+        System.out.println("╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -63,13 +62,13 @@ public class GameManager {
         Enemy enemy;
         switch (enemyChoice) {
             case "2":
-                enemy = new Dragon("Dragon", 200, 60, 20, 100, 80);
+                enemy = new Dragon();
                 break;
             case "3":
-                enemy = new Skeleton("Skeleton", 90, 30, 10, 50, 30);
+                enemy = new Skeleton();
                 break;
             default:
-                enemy = new Goblin("Goblin", 60, 20, 5, 30, 15);
+                enemy = new Goblin();
                 break;
         }
 

@@ -19,12 +19,13 @@ public class Skeleton extends Enemy {
         System.out.println("Skrall shot "+target.getName()+" with an arrow! for "+damage+" damage!");
         target.takeDamage(damage);
 
-        Regenerate();
+        regenerate();
     }
 
-    public void Regenerate(){
-       setHp(getHp()+5);
-       System.out.println("Skrall regenerates 5 HP!");
+    public void regenerate(){
+        int healed = Math.min(5, getMaxHp() - getHp());
+        setHp(getHp() + healed);
+        System.out.println("Skrall regenerates " + healed + " HP! (" + getHp() + "/" + getMaxHp() + ")");
     }
 
 

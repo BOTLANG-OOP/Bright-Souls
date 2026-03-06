@@ -15,7 +15,8 @@ public class Dragon extends Enemy {
     @Override
     public void performAttack(Character target){
         int damage = (int)(getAttack() * 2);
-        System.out.println("Alduin attacks and breathes fire on "+target.getName()+"! for "+ damage+" damage!");
+        System.out.println("Bahamut attacks and breathes fire on "+target.getName()+"! for "+ damage+" damage!");
+        target.takeDamage(damage);
     }
 }
 
