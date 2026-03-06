@@ -31,6 +31,14 @@ public class Inventory {
         }
     }
 
+    public void removeItem(int index) {
+        if (index >= 0 && index < items.size()) {
+            items.remove(index);
+        } else {
+            System.out.println("Invalid item index.");
+        }
+    }
+
     public void useItem(int index, Hero hero) {
         if (index >= 0 && index < items.size()) {
             Item itemToUse = items.get(index);

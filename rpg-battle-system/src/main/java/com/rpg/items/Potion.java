@@ -18,9 +18,10 @@ public class Potion extends Item {
     @Override
     public void use(Hero hero) {
         
-        int newHp = hero.getHp() + healAmount;
+        int newHp = Math.min(hero.getHp() + healAmount, hero.getMaxHp());
+        int actual = newHp - hero.getHp();
         hero.setHp(newHp);
         System.out.println(">>> " + hero.getName() + " drank " + name + "!");
-        System.out.println(">>> Restored " + healAmount + " HP. (Current HP: " + hero.getHp() + ")");
+        System.out.println(">>> Restored " + actual + " HP. (" + hero.getHp() + "/" + hero.getMaxHp() + " HP)");
     }
 }
