@@ -1,5 +1,5 @@
 /**
- * Author: TBD
+ * Author: John
  */
 package com.rpg.heroes;
 
@@ -7,20 +7,6 @@ import com.rpg.core.Character;
 import com.rpg.core.Hero;
 
 public class Warrior extends Hero {
-    public Warrior(String n, int h, int a) {
-        super(n, h, a);
-    }
-
-<<<<<<< HEAD
-    @Override
-    public void performAttack() {
-        System.out.println(getName() + " swings a heavy sword!");
-    }
-
-    @Override
-    public void useSpecialAbility() {
-        System.out.println(getName() + " uses Shield Bash! The enemy is stunned and skips their next turn.");
-=======
     public Warrior(String name, int hp, int attack, int defense) {
         super(name, hp, attack, defense);
     }
@@ -36,7 +22,6 @@ public class Warrior extends Hero {
         int damage = (int)(getAttack() * 0.5);
         System.out.println(getName() + " uses Shield Bash on " + target.getName() + "! (" + damage + " damage, enemy is stunned!)");
         target.takeDamage(damage);
->>>>>>> staging
     }
 }
   

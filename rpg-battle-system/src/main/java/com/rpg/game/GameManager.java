@@ -50,7 +50,13 @@ public class GameManager {
                 break;
         }
 
-        hero.getInventory().addItem(new Weapon(10));
+        if (hero instanceof Mage) {
+            hero.getInventory().addItem(new Weapon("Magic Staff", 10));
+        } else if (hero instanceof Archer) {
+            hero.getInventory().addItem(new Weapon("Longbow", 10));
+        } else {
+            hero.getInventory().addItem(new Weapon("Basic Sword", 10));
+        }
         hero.getInventory().addItem(new Potion(30));
 
         System.out.println("Choose your enemy:");
